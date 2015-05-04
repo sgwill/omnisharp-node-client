@@ -1257,4 +1257,12 @@ describe("Commands", function() {
             }).to.not.throw;
         });
     });
+
+    describe("stopserver", function() {
+        it("should not throw of required fields are set", function() {
+            expect(() => {
+                server.stopserver()
+            }).to.not.throw;
+        });
+    });
 });

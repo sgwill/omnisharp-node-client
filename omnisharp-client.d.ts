@@ -144,6 +144,9 @@ declare module OmnisharpClient {
         gettestcontext(request: OmniSharp.Models.TestCommandRequest): Rx.Observable<OmniSharp.Models.GetTestCommandResponse>;
         gettestcontextPromise(request: OmniSharp.Models.TestCommandRequest): Rx.IPromise<OmniSharp.Models.GetTestCommandResponse>;
         observeGettestcontext: Rx.Observable<Context<OmniSharp.Models.TestCommandRequest, OmniSharp.Models.GetTestCommandResponse>>;
+        stopserver(request: any): Rx.Observable<any>;
+        stopserverPromise(request: any): Rx.IPromise<any>;
+        observeStopserver: Rx.Observable<Context<any, any>>;
     }
 }
 

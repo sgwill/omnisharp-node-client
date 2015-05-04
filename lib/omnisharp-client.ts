@@ -159,6 +159,7 @@ export class OmnisharpClient implements OmniSharp.Api, IDriver {
         this.observeGetcodeactions = this._responseStream.filter(z => z.command == "getcodeactions");
         this.observeRuncodeaction = this._responseStream.filter(z => z.command == "runcodeaction");
         this.observeGettestcontext = this._responseStream.filter(z => z.command == "gettestcontext");
+        this.observeStopserver = this._responseStream.filter(z => z.command == "stopserver");
     }
 
     public updatebuffer(request: OmniSharp.Models.Request): Rx.Observable<any> {
@@ -543,5 +544,15 @@ export class OmnisharpClient implements OmniSharp.Api, IDriver {
     }
 
     public observeGettestcontext: Rx.Observable<Context<OmniSharp.Models.TestCommandRequest, OmniSharp.Models.GetTestCommandResponse>>;
+
+    public stopserver(): Rx.Observable<any> {
+        return this.request<any, any>("stopserver");
+    }
+
+    public stopserverPromise(): Rx.IPromise<any> {
+        return this.stopserver().toPromise();
+    }
+
+    public observeStopserver: Rx.Observable<Context<any, any>>;
 
 }

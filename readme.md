@@ -115,6 +115,9 @@ For those that like promises, there is a promise API as well.
   * `gettestcontext(request: OmniSharp.Models.TestCommandRequest): Rx.Observable<OmniSharp.Models.GetTestCommandResponse>`
   * `gettestcontextPromise(request: OmniSharp.Models.TestCommandRequest): Rx.IPromise<OmniSharp.Models.GetTestCommandResponse>`
 
+  * `stopserver(request: any): Rx.Observable<any>`
+  * `stopserverPromise(request: any): Rx.IPromise<any>`
+
 
 ## Observables
   * ``events: Rx.Observable<OmniSharp.Stdio.Protocol.EventPacket>``
@@ -170,3 +173,4 @@ Since the request is bundled with the response in the context object, you have a
   * `observeGetcodeactions: Rx.Observable<Context<OmniSharp.Models.CodeActionRequest, OmniSharp.Models.GetCodeActionsResponse>>`
   * `observeRuncodeaction: Rx.Observable<Context<OmniSharp.Models.CodeActionRequest, OmniSharp.Models.RunCodeActionResponse>>`
   * `observeGettestcontext: Rx.Observable<Context<OmniSharp.Models.TestCommandRequest, OmniSharp.Models.GetTestCommandResponse>>`
+  * `observeStopserver: Rx.Observable<Context<any, any>>`
